@@ -1,0 +1,1026 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Les Travaux Pratiques du cours Développement Android">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.1">
+    
+    
+      
+        <title>TP1 - TP Android</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.aa3de92b.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="light-green" data-md-color-accent="green">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#tp1-elements-graphiques-de-base-et-intents" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="TP Android" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                TP Android
+              </span>
+              <span class="md-header-nav__topic">
+                TP1
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    TP Android
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Travaux Pratiques Développement mobile" class="md-nav__link">
+      Travaux Pratiques Développement mobile
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        TP1
+      </label>
+    
+    <a href="./" title="TP1" class="md-nav__link md-nav__link--active">
+      TP1
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#telecharger-pdf" title="Télécharger PDF" class="md-nav__link">
+    Télécharger PDF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs-du-tp" title="Objectifs du TP" class="md-nav__link">
+    Objectifs du TP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outils-et-versions" title="Outils et Versions" class="md-nav__link">
+    Outils et Versions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-view-et-viewgroup" title="I. View et ViewGroup" class="md-nav__link">
+    I. View et ViewGroup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-le-composant-view" title="1. Le Composant View" class="md-nav__link">
+    1. Le Composant View
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-les-layouts" title="2. Les Layouts" class="md-nav__link">
+    2. Les Layouts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-exercice-1-composants-graphiques-de-base" title="II. Exercice 1 : Composants Graphiques de Base" class="md-nav__link">
+    II. Exercice 1 : Composants Graphiques de Base
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectif" title="1. Objectif" class="md-nav__link">
+    1. Objectif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-comportement-du-bouton" title="2. Comportement du bouton" class="md-nav__link">
+    2. Comportement du bouton
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methode-1-surcharge-du-listener-du-bouton" title="Méthode 1: Surcharge du Listener du bouton" class="md-nav__link">
+    Méthode 1: Surcharge du Listener du bouton
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methode-2-definition-dune-methode-propre-au-bouton" title="Méthode 2 : Définition d’une méthode propre au bouton" class="md-nav__link">
+    Méthode 2 : Définition d’une méthode propre au bouton
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methode-3-implementation-de-linterface-onclicklistener" title="Méthode 3 : Implémentation de l’interface OnClickListener" class="md-nav__link">
+    Méthode 3 : Implémentation de l’interface OnClickListener
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-comportement-dun-edittext" title="3. Comportement d’un EditText" class="md-nav__link">
+    3. Comportement d’un EditText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-comportement-dun-textview" title="4. Comportement d’un TextView" class="md-nav__link">
+    4. Comportement d’un TextView
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-comportement-dun-bouton-radio" title="5. Comportement d’un Bouton Radio" class="md-nav__link">
+    5. Comportement d’un Bouton Radio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-manipulation-des-ressources" title="6. Manipulation des ressources" class="md-nav__link">
+    6. Manipulation des ressources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couleurs" title="Couleurs" class="md-nav__link">
+    Couleurs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-exercice-2-intents" title="III. Exercice 2 : Intents" class="md-nav__link">
+    III. Exercice 2 : Intents
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectif_1" title="1. Objectif" class="md-nav__link">
+    1. Objectif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-intents-definition" title="2. Intents: Définition" class="md-nav__link">
+    2. Intents: Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-intents-explicites" title="3. Intents Explicites" class="md-nav__link">
+    3. Intents Explicites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-intents-implicites" title="4. Intents Implicites" class="md-nav__link">
+    4. Intents Implicites
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homework" title="Homework" class="md-nav__link">
+    Homework
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#telecharger-pdf" title="Télécharger PDF" class="md-nav__link">
+    Télécharger PDF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs-du-tp" title="Objectifs du TP" class="md-nav__link">
+    Objectifs du TP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outils-et-versions" title="Outils et Versions" class="md-nav__link">
+    Outils et Versions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-view-et-viewgroup" title="I. View et ViewGroup" class="md-nav__link">
+    I. View et ViewGroup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-le-composant-view" title="1. Le Composant View" class="md-nav__link">
+    1. Le Composant View
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-les-layouts" title="2. Les Layouts" class="md-nav__link">
+    2. Les Layouts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-exercice-1-composants-graphiques-de-base" title="II. Exercice 1 : Composants Graphiques de Base" class="md-nav__link">
+    II. Exercice 1 : Composants Graphiques de Base
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectif" title="1. Objectif" class="md-nav__link">
+    1. Objectif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-comportement-du-bouton" title="2. Comportement du bouton" class="md-nav__link">
+    2. Comportement du bouton
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methode-1-surcharge-du-listener-du-bouton" title="Méthode 1: Surcharge du Listener du bouton" class="md-nav__link">
+    Méthode 1: Surcharge du Listener du bouton
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methode-2-definition-dune-methode-propre-au-bouton" title="Méthode 2 : Définition d’une méthode propre au bouton" class="md-nav__link">
+    Méthode 2 : Définition d’une méthode propre au bouton
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methode-3-implementation-de-linterface-onclicklistener" title="Méthode 3 : Implémentation de l’interface OnClickListener" class="md-nav__link">
+    Méthode 3 : Implémentation de l’interface OnClickListener
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-comportement-dun-edittext" title="3. Comportement d’un EditText" class="md-nav__link">
+    3. Comportement d’un EditText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-comportement-dun-textview" title="4. Comportement d’un TextView" class="md-nav__link">
+    4. Comportement d’un TextView
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-comportement-dun-bouton-radio" title="5. Comportement d’un Bouton Radio" class="md-nav__link">
+    5. Comportement d’un Bouton Radio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-manipulation-des-ressources" title="6. Manipulation des ressources" class="md-nav__link">
+    6. Manipulation des ressources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couleurs" title="Couleurs" class="md-nav__link">
+    Couleurs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-exercice-2-intents" title="III. Exercice 2 : Intents" class="md-nav__link">
+    III. Exercice 2 : Intents
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectif_1" title="1. Objectif" class="md-nav__link">
+    1. Objectif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-intents-definition" title="2. Intents: Définition" class="md-nav__link">
+    2. Intents: Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-intents-explicites" title="3. Intents Explicites" class="md-nav__link">
+    3. Intents Explicites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-intents-implicites" title="4. Intents Implicites" class="md-nav__link">
+    4. Intents Implicites
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homework" title="Homework" class="md-nav__link">
+    Homework
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="tp1-elements-graphiques-de-base-et-intents">TP1 - Éléments Graphiques de base et Intents</h1>
+<p><img alt="Web Services" src="../img/android.jpg" /></p>
+<h2 id="telecharger-pdf">Télécharger PDF</h2>
+<p><a href="../tp1.pdf"><img alt="Download TP1" src="../img/pdf.png" /></a></p>
+<h2 id="objectifs-du-tp">Objectifs du TP</h2>
+<p>Création et manipulation d’éléments graphiques de base dans Android, et familiarisation avec la notion d’intent, implicite et explicite.</p>
+<h2 id="outils-et-versions">Outils et Versions</h2>
+<ul>
+<li><a href="https://developer.android.com/studio/index.html#tos-header">Android Studio</a> Version: 3.0.1</li>
+</ul>
+<h2 id="i-view-et-viewgroup">I. View et ViewGroup</h2>
+<h3 id="1-le-composant-view">1. Le Composant View</h3>
+<p>La classe View représente la classe de base pour la création d’une interface graphique en Android. C’est la classe mère de tous les widgets (éléments graphiques), utilisés pour créer des composants graphiques interactifs (boutons, champs texte, champs de saisie…).
+Une vue occupe un espace rectangulaire sur l’écran, responsable de la gestion des évènements initiés par l’utilisateur.
+Une sous-classe ViewGroup est définie par Android, représentant la classe de base pour tous les layouts (dispositions), qui sont des conteneurs invisibles qui rassemblent plusieurs View ou ViewGroup, et définissent leur emplacement dans l’écran (détaillés dans la section 2 : Les Layouts ).</p>
+<h3 id="2-les-layouts">2. Les Layouts</h3>
+<p>Chaque élément d’une interface graphique est soit un objet View, soit ViewGroup. Les dispositions de ces éléments dans l’écran sont précisées principalement par des Layouts.
+Un Layout est un ViewGroup qui regroupe un ensemble de widgets ou d’autres layouts, permettant ainsi de définir leur disposition sur l’écran de la fenêtre principale. Parmi les layouts existants, on cite le FrameLayout, LinearLayout, RelativeLayout…</p>
+<h2 id="ii-exercice-1-composants-graphiques-de-base">II. Exercice 1 : Composants Graphiques de Base</h2>
+<h3 id="1-objectif">1. Objectif</h3>
+<p>L’objectif de cette première partie est de réaliser une application de calcul d'IMC
+(Indice de Masse Corporelle) ayant une interface semblable à ce qui suit (veiller à respecter les tailles et emplacements des éléments graphiques):</p>
+<p><img alt="Exercice 1" src="../img/tp1/exer1.png" /></p>
+<ul>
+<li><strong>Activité 1</strong> : Commencer par créer l’interface graphique, identique à la figure qui précède. Lancer l’émulateur, et vérifier que le rendu correspond à ce qui est demandé.</li>
+</ul>
+<h3 id="2-comportement-du-bouton">2. Comportement du bouton</h3>
+<p>Soit le bouton défini dans le fichier main.xml, dont l’identifiant est b_calcul. Pour manipuler ce bouton, trois méthodes principales sont en général utilisées:</p>
+<h4 id="methode-1-surcharge-du-listener-du-bouton">Méthode 1: Surcharge du Listener du bouton</h4>
+<p>En Java, un Listener (écouteur) est un objet permettant au programmeur de réagir suite aux actions de l’utilisateur (clic de souris, touche du clavier, etc.). Dans notre cas, nous avons besoin d’un écouteur pour le clic sur le bouton, appelé onClickListener. Listener est une interface, qui fournit des méthodes qui doivent être implémentées par le programmeur. Par exemple, le onClickListener contient une méthode onClick, qu’on doit implémenter pour définir le comportement de notre bouton.</p>
+<ul>
+<li><strong>1</strong> : Créer un attribut dans votre activité de type Button :</li>
+</ul>
+<div class="codehilite"><pre><span></span>  <span class="kd">private</span> <span class="n">Button</span> <span class="n">bCalcul</span><span class="o">;</span>
+</pre></div>
+
+
+<ul>
+<li><strong>2</strong> : Dans la méthode onCreate(), initialiser l’attribut bConvert en lui associant le bouton créé dans le main.xml :</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">this</span><span class="o">.</span><span class="na">bCalcul</span> <span class="o">=</span> <span class="o">(</span><span class="n">Button</span><span class="o">)</span> <span class="k">this</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">b_calcul</span><span class="o">)</span> <span class="o">;</span>
+</pre></div>
+
+
+<ul>
+<li><strong>3</strong> : Utiliser le code suivant pour définir  le comportement du bouton bConvert (de préférence à l’intérieur de la méthode onCreate).</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">this</span><span class="o">.</span><span class="na">bCalcul</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">//comportement de votre bouton</span>
+       <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+
+
+<h4 id="methode-2-definition-dune-methode-propre-au-bouton">Méthode 2 : Définition d’une méthode propre au bouton</h4>
+<p>Il existe une manière moins encombrante de définir le comportement du bouton, mais qui ne peut pas s’appliquer à tous les évènements, seulement au clic.</p>
+<ul>
+<li><strong>1</strong> : Dans l’élément XML du bouton, ajouter l’attribut :</li>
+</ul>
+<div class="codehilite"><pre><span></span>android:onClick=&quot;calcul&quot;
+</pre></div>
+
+
+<p>Cet attribut indique qu’il existe une méthode dans le code de l’activité, appelée calcul, qui définit le comportement du bouton au clic.</p>
+<ul>
+<li><strong>2</strong> : Dans le code de l’activité, ajouter la méthode suivante :</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">calcul</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">){</span>
+<span class="c1">// comportement du bouton</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>La méthode calcul ainsi définie a une signature particulière : elle doit obligatoirement être publique, retourner void et prendre comme paramètre un objet de type android.view.View (vous remarquerez que cette méthode a la même signature que la méthode onClick, surchargée dans la première méthode). Il faut noter également que la vue v passée en paramètre, correspond à l’objet cliqué.</p>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>Si vous utilisez cette solution, il est inutile de définir une variable de type Button en Java, et de l’associer au bouton défini dans le fichier XML.</p>
+</div>
+<h4 id="methode-3-implementation-de-linterface-onclicklistener">Méthode 3 : Implémentation de l’interface OnClickListener</h4>
+<p>Il est possible d’utiliser l’héritage pour surcharger la méthode onClick, sans passer par l’appel à la méthode setOnClickListener. Il suffit de suivre les étapes suivantes :</p>
+<ul>
+<li><strong>1</strong> : Votre activity doit implémenter l’interface OnClickListener. Ceci est réalisé en transformant la signature de votre classe activité comme suit, par exemple :</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">IMC</span>  <span class="kd">extends</span> <span class="n">Activity</span> <span class="kd">implements</span> <span class="n">OnClickListener</span> <span class="o">{</span><span class="err">…</span><span class="o">}</span>
+</pre></div>
+
+
+<ul>
+<li>
+<p><strong>2</strong> : Créer l’attribut bCalcul de type Button et l’associer à l’élément XML b_calcul, comme dans la méthode 1.</p>
+</li>
+<li>
+<p><strong>3</strong> : Définir l’activité courante comme étant l’écouteur du clic sur le bouton bCalcul :</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">bCalcul</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+</pre></div>
+
+
+<ul>
+<li><strong>4</strong> : Ajouter la méthode onClick dans votre activité, comme suit :</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">getId</span><span class="o">()==</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">b_calcul</span><span class="o">){</span>
+            <span class="c1">//Comportement du bouton b_convert</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Cette méthode sera commune à tous les éléments cliquables, il faut donc distinguer le comportement selon l‘identifiant de l‘élément cliqué.</p>
+</div>
+<p>Cette méthode peut s’avérer utile dans le cas où on voudrait par exemple regrouper les implémentations de tous les boutons de l’interface dans la même méthode, ou si plusieurs boutons partageaient une partie de leur comportement.</p>
+<h3 id="3-comportement-dun-edittext">3. Comportement d’un EditText</h3>
+<p>Un EditText est un objet graphique qui permet à l’utilisateur de saisir une chaîne de caractères, utilisable par l’application.
+De même que pour le bouton (ainsi que tous les éléments graphiques que nous désirons utiliser dans notre application), nous devons définir et initialiser un objet Java associé au champs EditText :</p>
+<ul>
+<li><strong>1</strong> : Créer un attribut dans votre activité de type EditText:</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kd">private</span> <span class="n">EditText</span> <span class="n">eEntry</span><span class="o">;</span>
+</pre></div>
+
+
+<ul>
+<li><strong>2</strong> : Dans la méthode onCreate(), initialiser l’attribut eEntree en lui associant le champs de saisie créé dans le main.xml :</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">this</span><span class="o">.</span><span class="na">eEntry</span> <span class="o">=</span> <span class="o">(</span><span class="n">EditText</span><span class="o">)</span> <span class="k">this</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">e_entry</span><span class="o">)</span> <span class="o">;</span>
+</pre></div>
+
+
+<ul>
+<li><strong>3</strong> : Définir son comportement. Pour un champs de saisie, les principales fonctionnalités sont :<ul>
+<li>La lecture du contenu : pour cela on utilise la méthode :</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">eEntry</span><span class="o">.</span><span class="na">getText</span><span class="o">().</span><span class="na">toString</span><span class="o">();</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>* La modification du contenu :
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">eEntry</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&quot;Nouveau texte &quot;</span><span class="o">);</span>
+</pre></div>
+
+
+<h3 id="4-comportement-dun-textview">4. Comportement d’un TextView</h3>
+<p>Un TextView est un objet graphique qui permet d’afficher une chaîne de caractères non-éditable par l’utilisateur. Le TextView peut être utilisé par l’application exactement de la même manière qu’un EditText.</p>
+<h3 id="5-comportement-dun-bouton-radio">5. Comportement d’un Bouton Radio</h3>
+<p>Un bouton radio est un bouton à deux états qui peut être soit coché (checked) ou décoché (unchecked). Les boutons radios sont en général utilisés dans un groupe RadioGroup. Au sein d’un même groupe, un seul bouton radio peut être coché.</p>
+<p>Pour gérer l’état d’un bouton radio, il faut suivre les étapes suivantes :</p>
+<ul>
+<li>
+<p>Créer un attribut de type RadioButton dans votre activité (par exemple rHomme).</p>
+</li>
+<li>
+<p>L’associer au bouton radio approprié de votre interface en utilisant la méthode findViewById.</p>
+</li>
+<li>
+<p>Pour tester l’état de votre bouton radio, appeler la méthode isChecked().</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="o">(</span><span class="n">rHomme</span><span class="o">.</span><span class="na">isChecked</span><span class="o">()</span> <span class="o">){</span>
+        <span class="c1">//traitement</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>Pour mettre à jour l’état du bouton radio, utiliser la méthode setChecked(boolean etat). Par exemple, si on veut cocher l’élément radio1 et décocher radio2, on peut faire comme suit :</p>
+<div class="codehilite"><pre><span></span><span class="n">radio1</span><span class="o">.</span><span class="na">setChecked</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+<span class="n">radio2</span><span class="o">.</span><span class="na">setChecked</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Remarques</p>
+<ul>
+<li><strong>1</strong> Pour utiliser les boutons radios, il est inutile de définir des variables en Java pour le RadioGroup.</li>
+<li><strong>2</strong>  Dans l’exemple précédent (4), si radio1 et radio2 se trouvent dans un RadioGroup, il est inutile de changer leurs deux états : le changement de l’état de l’un va automatiquement changer l’autre, puisqu’un seul peut être coché à la fois.</li>
+</ul>
+</div>
+<h3 id="6-manipulation-des-ressources">6. Manipulation des ressources</h3>
+<h3 id="couleurs">Couleurs</h3>
+<p>Pour ajouter une nouvelle couleur, il suffit de modifier le fichier colors.xml qui se trouve sous le répertoire values en insérant les lignes suivantes :</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;resources&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;colorPrimary&quot;</span><span class="nt">&gt;</span>#3F51B5<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;colorPrimaryDark&quot;</span><span class="nt">&gt;</span>#303F9F<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;colorAccent&quot;</span><span class="nt">&gt;</span>#FF4081<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;colorRed&quot;</span><span class="nt">&gt;</span>#D50000<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;colorGreen&quot;</span><span class="nt">&gt;</span>#2E7D32<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;colorOrange&quot;</span><span class="nt">&gt;</span>#E65100<span class="nt">&lt;/color&gt;</span>
+
+<span class="nt">&lt;/resources&gt;</span>
+</pre></div>
+
+
+<p>Pour changer la couleur d'un TextView dynamiquement, il faut utiliser la fonction setTextColor(int color) de la classe TextView.</p>
+<p>exemple :</p>
+<div class="codehilite"><pre><span></span>  <span class="n">textInterp</span><span class="o">.</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">getResources</span><span class="o">().</span><span class="na">getColor</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">color</span><span class="o">.</span><span class="na">colorRed</span><span class="o">));</span>
+</pre></div>
+
+
+<ul>
+<li><strong>activité 2</strong> : Définir maintenant le comportement des différents composants de votre interface en utilisant la méthode de votre choix.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>
+<p><strong>1</strong> Le calcul d'IMC se fait comme suit: IMC = masse / taille²</p>
+</li>
+<li>
+<p><strong>2</strong> L'interprétation de l'IMC se fait selon les critères définis par l'Organisation mondiale de la Santé.
+  <img alt="Exercice 1" src="../img/tp1/imc.png" /></p>
+</li>
+</ul>
+</div>
+<h2 id="iii-exercice-2-intents">III. Exercice 2 : Intents</h2>
+<h3 id="1-objectif_1">1. Objectif</h3>
+<p>Durée estimée de l’exercice : au plus 1h</p>
+<p>L’objectif de cette deuxième partie est de modifier l’application de la première partie pour obtenir le résultat suivant :</p>
+<p><img alt="Exercice 2" src="../img/tp1/exer2.png" /></p>
+<h3 id="2-intents-definition">2. Intents: Définition</h3>
+<p>Une application Android peut contenir plusieurs activités. Une activité utilise la méthode setContentView pour s’associer avec une interface graphique. À la base, les activités sont indépendantes les unes des autres, cependant, elles peuvent collaborer pour échanger des données et des actions.</p>
+<p>Typiquement, l’une des activités est désignée comme étant la première à être présentée à l’utilisateur quand l’application est lancée : on l’appelle l’activité de démarrage. Toutes les activités interagissent en mode asynchrone.</p>
+<p>Le passage d’une activité à une autre est réalisé en demandant à l’activité en cours d’exécuter un Intent.
+Un intent est un message qui peut être utilisé pour demander une action à partir d’un composant de l’application. Il permet invoquer des Activités, des Broadcast Receivers ou des Services. Les différentes méthodes utilisées pour appeler ces composantes sont les suivantes :</p>
+<ul>
+<li>startActivity(intent) : lance une activité.</li>
+<li>sendBroadcast(intent) :  envoie un intent à tous les composants Broadcast Receivers intéressés.</li>
+<li>startService(intent) ou bindService(intent, …) : communiquent avec un service en arrière plan.</li>
+</ul>
+<p>Un intent comporte des informations que le système Android utilise.</p>
+<ul>
+<li>Nom du composant à démarrer</li>
+<li>Action à réaliser : ACTION-VIEW, ACTION_SEND…</li>
+<li>Donnée : URI référençant la donnée sur laquelle l’action va agir</li>
+<li>Catégorie : Information supplémentaire sur le type de composants qui va gérer l’intent, par exemple : CATEGORY-BROWSABLE, CATEGORY-LAUNCHER…</li>
+<li>Extras : Paires clef-valeur qui comportent des informations additionnelles pour réaliser l’action demandée.</li>
+<li>Drapeaux (Flags) : Définissent la classe qui fonctionne comme métadonnée pour cet intent, ils peuvent indiquer comment lancer une activité et comment la traiter une fois lancée.</li>
+</ul>
+<p>Il existe principalement deux types d’Intents : Intents explicites et intents implicites.</p>
+<h3 id="3-intents-explicites">3. Intents Explicites</h3>
+<p>Les intents explicites spécifient le composant à démarrer par nom (nom complet de la classe). Ils permettent de démarrer un composant de votre propre application, car le nom de sa classe est connu. Par exemple: démarrer une autre activité en réponse à l’action d’un utilisateur.</p>
+<p>Les principaux arguments d’un Intent explicite sont :</p>
+<ul>
+<li>
+<p>Le contexte déclenchant l’Intent (en général this, si on le lance à partir de l’activité de départ, ou bien <Activity_class_name>.this).</p>
+</li>
+<li>
+<p>La classe destination (en général <Activity_class_name>.class).</p>
+</li>
+</ul>
+<p>Il est typiquement appelé comme suit:</p>
+<div class="codehilite"><pre><span></span><span class="n">Intent</span> <span class="n">myActivityIntent</span> <span class="o">=</span>
+        <span class="k">new</span> <span class="n">Intent</span> <span class="o">(</span><span class="n">StartClass</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">EndClass</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">;</span>
+    <span class="n">startActivity</span> <span class="o">(</span><span class="n">myActivityIntent</span><span class="o">)</span> <span class="o">;</span>
+</pre></div>
+
+
+<p>Les données partagées entre les deux activités peuvent être envoyées sous forme d’Extras. Un extra est un élément sous forme de clef/valeur, que l’activité principale envoie à l’activité destination. Il est créé comme suit :</p>
+<div class="codehilite"><pre><span></span><span class="n">myActivityIntent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="s">&quot;clef&quot;</span><span class="o">,</span><span class="s">&quot;valeur&quot;</span><span class="o">);</span>
+</pre></div>
+
+
+<p>Attention, tous les extras doivent être associés à l’intent avant de déclencher ce dernier dans le startActivity, bien sûr.</p>
+<p>Il est également possible de démarrer une activité avec un résultat, en établissant un lien bidirectionnel entre deux activités. Pour recevoir un résultat à partir d’une autre activité, appeler startActivityForResult au lieu de startActivity.</p>
+<p>L’activité de destination doit bien sûr être conçue pour renvoyer un résultat une fois l’opération réalisée, et ce sous forme d’Intent. L’activité principale le recevra et le traitera dans la méthode prédéfinie onActivityResult.</p>
+<p>Voici un exemple d’un intent avec résultat :</p>
+<ul>
+<li>
+<p><strong>Activity1</strong>
+<img alt="INtents result " src="../img/tp1/intentresult1.png" /></p>
+</li>
+<li>
+<p><strong>Activity2</strong>
+<img alt="INtents result " src="../img/tp1/intentresult2.png" /></p>
+</li>
+</ul>
+<p>Le résultat obtenu par cet bout de code est le suivant :</p>
+<p><img alt="Activite 3" src="../img/tp1/resultatactivite3.png" /></p>
+<ul>
+<li><strong>Activité 3</strong> Commencer par créer l’interface graphique de la deuxième activité.
+Implémenter ensuite le code du bouton back, qui permet de revenir à l’activité
+principale en affichant le résultat trouvé dans un toast.</li>
+</ul>
+<h3 id="4-intents-implicites">4. Intents Implicites</h3>
+<p>Les intents implicites ne nomment pas un composant spécifique, mais déclarent une action à réaliser. Ils permettent à un composant d’une application d’appeler un autre composant, même s’il se trouve dans une autre application.</p>
+<p>Exemple : montrer à l’utilisateur un emplacement sur une Map.</p>
+<p>Les principaux arguments d’un Intent implicite sont :</p>
+<ul>
+<li>
+<p>Action : l’action à réaliser, peut être prédéfinie (ACTION_VIEW, ACTION_EDIT, ACTION_MAIN…) ou créée par l’utilisateur.</p>
+</li>
+<li>
+<p>Donnée : Les données principales sur lesquelles on va agir, tel que le numéro de téléphone à appeler.</p>
+</li>
+</ul>
+<p>Il est typiquement appelé comme suit:</p>
+<div class="codehilite"><pre><span></span><span class="n">Intent</span> <span class="n">myActivityIntent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span> <span class="o">(&lt;</span><span class="n">action</span><span class="o">&gt;,</span> <span class="o">&lt;</span><span class="n">donnee</span><span class="o">&gt;)</span> <span class="o">;</span>
+<span class="n">startActivity</span> <span class="o">(</span><span class="n">myActivityIntent</span><span class="o">)</span> <span class="o">;</span>
+</pre></div>
+
+
+<p>Un intent implicite se comporte comme suit:</p>
+<ul>
+<li><strong>1.</strong> Activité A crée un Intent avec une action et le passe en paramètre à startActivity.</li>
+<li><strong>2.</strong> Le système Android cherchent toutes les applications pour trouver un Intent Filter qui correspond à cet Intent.</li>
+<li><strong>3.</strong> Quand une correspondance est trouvée, le système démarrent l’activité (Activity B) en invoquant sa méthode onCreate et en lui passant l’intent.</li>
+</ul>
+<p><img alt="INtents " src="../img/intents.png" /></p>
+<p>Les intents implicites utilisent la notion de Intent Filter pour trouver l’activité destination à déclencher. Un Intent Filter est une expression dans le fichier Manifest d’une application qui spécifie le type d’intents que le composant veut recevoir. Il permet aux autres activités de lancer directement votre activité en utilisant un certain Intent.</p>
+<p>Si vous ne déclarez pas d’Intent Filters à votre activité, elle ne pourra être déclenchée que par un Intent Explicite. Il est néanmoins recommandé de ne pas déclarer d’Intent Filters pour les services, car cela peut causer des problèmes de sécurité.</p>
+<p>Voici un exemple d’Intent Filter :
+<img alt="INtents filter " src="../img/tp1/filter.png" /></p>
+<p>Voici un ensemble d’actions communément utilisées :
+Attention, la plupart des actions nécessitent des permissions à ajouter dans le fichier manifest, par exemple, pour autoriser votre activité à déclencher un appel, il faut ajouter la ligne :</p>
+<p><uses-permission android:name=« android.permission.CALL_PHONE"></uses-permission></p>
+<p>Exemple d’un Intent implicite qui permet d’envoyer un message texte :
+<img alt="INtentexemple " src="../img/tp1/exemplintent.png" /></p>
+<p>La méthode resolveActivity permet d’éviter que l’application crashe si l’activité appelée n’existe pas. C’est une sorte de gestion d’exception.</p>
+<p>Le résultat obtenu sera alors comme suit :</p>
+<p><img alt="INtentexemple " src="../img/tp1/sendmsg.png" /></p>
+<ul>
+<li><strong>Activité 4 :</strong> Implémenter ensuite le code du bouton call, qui permet de déclencher automatiquement un appel sur un numéro prédéfini.</li>
+</ul>
+<h2 id="homework">Homework</h2>
+<p>Votre premier travail consistera en la découverte du Material Design, le célèbre langage visuel défini par Google. Commencer par consulter sa documentation officielle :</p>
+<p>https://www.google.com/design/spec/material-design/introduction.html</p>
+<p>Lire attentivement les différentes recommandations et bonnes pratiques dictées par Google pour la conception d’interfaces graphiques. Appliquer ensuite ce patron sur l’application que nous venons de créer, en l’agrémentant des options et fonctionnalités de votre choix. Veillez à choisir des couleurs qui reflètent votre personnalité (et par pitié, évitez la combinaison rose/bleu standard…)</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Travaux Pratiques Développement mobile" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Travaux Pratiques Développement mobile
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ed2cc613.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:".."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
