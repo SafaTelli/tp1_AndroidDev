@@ -945,7 +945,9 @@ principale en affichant le résultat trouvé dans un toast.</li>
 <img alt="INtents filter " src="../img/tp1/filter.png" /></p>
 <p>Voici un ensemble d’actions communément utilisées :
 Attention, la plupart des actions nécessitent des permissions à ajouter dans le fichier manifest, par exemple, pour autoriser votre activité à déclencher un appel, il faut ajouter la ligne :</p>
-<p><uses-permission android:name=« android.permission.CALL_PHONE"></uses-permission></p>
+<p><code>xml
+    &lt;uses-permission android:name=« "android.permission.CALL_PHONE"&gt;
+    &lt;/uses-permission&gt;</code></p>
 <p>Exemple d’un Intent implicite qui permet d’envoyer un message texte :
 <img alt="INtentexemple " src="../img/tp1/exemplintent.png" /></p>
 <p>La méthode resolveActivity permet d’éviter que l’application crashe si l’activité appelée n’existe pas. C’est une sorte de gestion d’exception.</p>
