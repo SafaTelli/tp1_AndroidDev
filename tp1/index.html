@@ -943,11 +943,18 @@ principale en affichant le résultat trouvé dans un toast.</li>
 <p>Si vous ne déclarez pas d’Intent Filters à votre activité, elle ne pourra être déclenchée que par un Intent Explicite. Il est néanmoins recommandé de ne pas déclarer d’Intent Filters pour les services, car cela peut causer des problèmes de sécurité.</p>
 <p>Voici un exemple d’Intent Filter :
 <img alt="INtents filter " src="../img/tp1/filter.png" /></p>
-<p>Voici un ensemble d’actions communément utilisées :
-Attention, la plupart des actions nécessitent des permissions à ajouter dans le fichier manifest, par exemple, pour autoriser votre activité à déclencher un appel, il faut ajouter la ligne :</p>
-<p><code>xml
-    &lt;uses-permission android:name=« "android.permission.CALL_PHONE"&gt;
-    &lt;/uses-permission&gt;</code></p>
+<p>Voici un ensemble d’actions communément utilisées :</p>
+<p><img alt="INtents actions " src="../img/tp1/intent.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Attention, la plupart des actions nécessitent des permissions à ajouter dans le fichier manifest, par exemple, pour autoriser votre activité à déclencher un appel, il faut ajouter la ligne :</p>
+<div class="codehilite"><pre><span></span>``` xml
+  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.CALL_PHONE&quot;</span><span class="nt">&gt;&lt;/uses-permission&gt;</span>
+```
+</pre></div>
+
+
+</div>
 <p>Exemple d’un Intent implicite qui permet d’envoyer un message texte :
 <img alt="INtentexemple " src="../img/tp1/exemplintent.png" /></p>
 <p>La méthode resolveActivity permet d’éviter que l’application crashe si l’activité appelée n’existe pas. C’est une sorte de gestion d’exception.</p>
